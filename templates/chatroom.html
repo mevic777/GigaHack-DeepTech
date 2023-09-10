@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Docky - Chatroom</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/favico.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/chatroom.css') }}">
+</head>
+
+<body>
+    <header>
+        <a href="/">
+            <img src="{{ url_for('static', filename='assets/img/back-arrow.png') }}" alt="docky">
+        </a>
+        <a href="/">
+            <img src="{{ url_for('static', filename='assets/img/chat-title.png') }}" alt="docky">
+        </a>
+    </header>
+    <div class="chat-container">
+        <ul class="conversation"></ul>
+        <div class="input-box">
+            <input type="text" class="input-bar" required="required" name="chat">
+            <span>Ask Docky</span>
+            <img src="{{ url_for('static', filename='assets/img/plane.png') }}" class="sendMessageBtn" alt="docky">
+        </div>
+    </div>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/chatroom.css') }}">
+
+    <script src="{{ url_for('static', filename='assets/js/chatroom.js') }}"></script>
+</body>
+
+</html>

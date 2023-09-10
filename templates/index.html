@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docky</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/app.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/responsive.css') }}">
+    <!-- Favico -->
+    <link rel="shortcut icon" href="/templates/assets/img/favico.png" type="image/x-icon">
+</head>
+
+<body>
+    <section class="navigation" id="navigation">
+        <div class="container">
+            <div class="navigation-logo">
+                <a href="/">
+                    <img src="{{ url_for('static', filename='assets/img/logo.png') }}" alt="docky">
+                    <!-- <img src="/templates/assets/img/logo.png" alt="docky"> -->
+                </a>
+            </div>
+            <div class="navigation-links">
+                <a href="#navigation" class="navigation-link">home</a>
+                <a href="#about" class="navigation-link">about</a>
+                <a href="/chatroom" class="navigation-link navigation-link-chat">chat</a>
+            </div>
+        </div>
+        <img class="heartbeat-gif" src="{{ url_for('static', filename='assets/img/heartbeat.gif') }}" alt="docky">
+        <!-- <img class="heartbeat-gif" src="/templates/assets/img/heartbeat.gif" alt="docky"> -->
+    </section>
+
+    <section class="welcome hidden" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="welcome-title">
+                        docky
+                        <div class="welcome-title-point"></div>
+                    </div>
+                    <div class="welcome-description"><span style="color: var(--cl-main);">The AI</span> for biological
+                        research without the <span style="color: var(--cl-main);">boring</span> exploration and typical
+                        <span style="color: var(--cl-main);">long answers</span>.
+                    </div>
+                    <a href="/chatroom" class="docky-button">ASK DOCKY</a>
+                </div>
+                <div class="col-md-6 welcome-img">
+                    <img src="{{ url_for('static', filename='assets/img/docky.png') }}" alt="docky">
+
+                    <!-- <img src="/templates/assets/img/docky.png" alt="docky"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about hidden" id="about">
+        <div class="decor">
+            <div class="decor-question">
+                <div class="decor-question-text">who is docky</div>
+                <div class="decor-question-mark">?</div>
+            </div>
+            <div class="decor-dots-bg">
+                <!-- <img src="/templates/assets/img/dots.png" alt="docky"> -->
+                <img src="{{ url_for('static', filename='assets/img/dots.png') }}" alt="docky">
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="decor">
+                        <div class="decor-adn">
+                            <img src="{{ url_for('static', filename='assets/img/dna.png') }}" alt="docky">
+
+                            <!-- <img src="/templates/assets/img/dna.png" alt="docky"> -->
+                        </div>
+                    </div>
+                    <div class="about-logo">
+                        <img src="{{ url_for('static', filename='assets/img/docky-logo.png') }}" alt="docky">
+
+                        <!-- <img src="/templates/assets/img/docky-logo.png" alt="docky"> -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-title">
+                        docky
+                    </div>
+                    <div class="about-description">
+                        <span style="color: var(--cl-main);">Docky</span>,
+                        our AI online biology research bot revolutionizes <span
+                            style="color: var(--cl-main);">scientific discovery</span>.
+                        Powered by advanced
+                        algorithms, it accelerates data analysis, identifies patterns, and suggests novel research
+                        avenues, unlocking <span style="color: var(--cl-main);">new opportunities for
+                            breakthroughs.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="swot hidden">
+        <div class="decor">
+            <div class="decor-dots-bg">
+                <!-- <img src="/templates/assets/img/dots.png" alt="docky"> -->
+                <img src="{{ url_for('static', filename='assets/img/dots.png') }}" alt="docky">
+
+            </div>
+            <div class="decor-question">
+                <div class="decor-question-mark">?</div>
+                <div class="decor-question-text">if you use docky</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="swot-card">
+                        <div class="swot-header">
+                            <div class="swot-card-title">
+                                <div class="swot-card-dot"></div>
+                                Strengths
+                            </div>
+                            <div class="swot-card-decor swot-card-decor-strengths">
+                                <!-- <img src="/templates/assets/img/muscle.png" alt="docky" id="strengths"> -->
+                                <img src="{{ url_for('static', filename='assets/img/muscle.png') }}" alt="docky">
+
+                            </div>
+                        </div>
+                        <div class="swot-card-description">
+                            Efficient data analysis, rapid literature review, automated experiments, trend
+                            identification, interdisciplinary insights, and continuous learning capabilities.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="swot-card">
+                        <div class="swot-header">
+                            <div class="swot-card-title">
+                                <div class="swot-card-dot"></div>
+                                Weaknesses
+                            </div>
+                            <div class="swot-card-decor">
+                                <img src="{{ url_for('static', filename='assets/img/weak.png') }}" alt="docky">
+
+                                <!-- <img src="/templates/assets/img/weak.png" alt="docky" id="weaknesses"> -->
+                            </div>
+                        </div>
+                        <div class="swot-card-description">
+                            Potential inaccuracies, limited contextual understanding, ethical concerns, data biases,
+                            complex experiments, and reduced human creativity.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="swot-card">
+                        <div class="swot-header">
+                            <div class="swot-card-title">
+                                <div class="swot-card-dot"></div>
+                                Opportunities
+                            </div>
+                            <div class="swot-card-decor">
+                                <img src="{{ url_for('static', filename='assets/img/opp.png') }}" alt="docky">
+
+                                <!-- <img src="/templates/assets/img/opp.png" alt="docky" id="opp"> -->
+                            </div>
+                        </div>
+                        <div class="swot-card-description">
+                            Accelerate scientific discovery, cross-disciplinary collaboration, data-driven insights,
+                            personalized medicine, and address global health challenges efficiently.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="swot-card">
+                        <div class="swot-header">
+                            <div class="swot-card-title">
+                                <div class="swot-card-dot"></div>
+                                Threats
+                            </div>
+                            <div class="swot-card-decor">
+                                <img src="{{ url_for('static', filename='assets/img/danger.png') }}" alt="docky">
+
+                                <!-- <img src="/templates/assets/img/danger.png" alt="docky" id="danger"> -->
+                            </div>
+                        </div>
+                        <div class="swot-card-description">
+                            Data privacy breaches, misuse of research findings, bias amplification, decreased human
+                            involvement, and ethical dilemmas in research.
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-center justify-content-center">
+                    <a class="docky-button" href="/chatroom">ASK DOCKY</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <a class="footer-logo" href="#navigation">
+                <img src="{{ url_for('static', filename='assets/img/danger.png') }}" alt="docky">
+
+                <img src="/templates/assets/img/logo.png" alt="docky">
+                <div class="footer-logo-text">docky</div>
+            </a>
+            <div class="footer-competition">Project implemented at <br> <a href="https://gigahack.md/"
+                    style="font-weight: var(--ft-800)">DeepTech
+                    GigaHack</a></div>
+            <div class="footer-team">
+                Developed by 1D3M
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='assets/js/index.js') }}" alt="docky"></script>
+
+    <script src=""></script>
+    <script src="/templates/assets/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+@media (max-width: 920px) {
+    .footer {
+        height: 300px;
+    }
+
+    .footer .container {
+        display: grid;
+        place-items: center;
+        place-content: center;
+        gap: 20px;
+    }
+
+    .decor-dots-bg img {
+        width: 100%;
+        bottom: -20px;
+    }
+
+    .decor-question {
+        height: 70px;
+        font-size: 23px;
+    }
+
+    .welcome-title {
+        font-size: 60px;
+    }
+
+    .welcome-title-point {
+        height: 10px;
+        width: 10px;
+        margin-bottom: 23px;
+    }
+
+    .welcome-img {
+        margin-top: 30px;
+    }
+
+    .welcome-img img {
+        width: 100%;
+        height: unset;
+    }
+
+    .decor-adn img {
+        height: 400px;
+        left: unset;
+    }
+
+    .about-logo img {
+        height: 300px;
+    }
+
+    .about-title {
+        font-size: 55px;
+    }
+
+    .about-title::after {
+        height: 5px;
+        width: 127px;
+        left: 2px;
+        bottom: 10px;
+    }
+
+    .navigation .container {
+        gap: 30px;
+    }
+
+    .navigation-links {
+        gap: 15px;
+    }
+
+    .swot {
+        margin-top: 50px;
+    }
+}
